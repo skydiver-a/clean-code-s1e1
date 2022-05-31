@@ -1,62 +1,72 @@
 /* Basic Style */
-body {
+ul {
+    margin:0;
+    padding: 0;
+}
+
+.main-box__input-add,
+.main-box__check-box,
+.main-box__input-text {
+    outline: none;
+}
+
+.main {
     background-color: #f8f8f8;
     color: #333;
     font-family: Lato, sans-serif;
 }
+
 .header {
     width: 500px;
     margin: 0 auto;
     display: block;
     text-align: right;
 }
+
 .header img {
     width: 100%;
 }
-.header .header__info {
+
+.header,
+.header__info {
     font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-.header { text-align: center;
+    .header {
+        text-align: center;
+    }
 }
-}
+
 .main-box {
     display: block;
     width: 500px;
     margin: 0 auto 0;
 }
-.task {
-    width: 56%;
-    display: inline-block;
-    flex-grow: 1
-}
-.main__tasks_wrapper {
+
+.main-box__wrapper {
     display: flex;
 }
-ul {
-    margin:0;
-    padding: 0px;
-}
-li, h3 {
-    list-style:none;
-}
-input,button{
+
+.main-box__btn {
     outline:none;
-}
-button {
     background: none;
-    border: 0px;
+    border: 0;
     color: #888;
     font-size: 15px;
     width: 60px;
     font-family: Lato, sans-serif;
     cursor: pointer;
 }
-button:hover {
+
+.main-box__btn:hover {
     color: #3a3A3a;
 }
+
 /* Heading */
+li, h3 {
+    list-style:none;
+}
 h3,
 label[for='main__tasks_add'] {
     color: #333;
