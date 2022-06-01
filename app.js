@@ -93,18 +93,17 @@ const editTask = function () {
 }
 
 //Delete task.
-const deleteTask=function(){
+const deleteTask = function () {
     console.log("Delete Task...");
 
-    const listItem=this.parentNode;
-    const ul=listItem.parentNode;
+    const listItem = this.parentNode;
+    const ul = listItem.parentNode;
     //Remove the parent list item from the ul.
     ul.removeChild(listItem);
-
 }
 
 //Mark task completed
-const taskCompleted=function(){
+const taskCompleted = function(){
     console.log("Complete Task...");
 
     //Append the task list item to the #main__tasks_completed-list
@@ -113,12 +112,12 @@ const taskCompleted=function(){
     bindTaskEvents(listItem, taskIncomplete);
 }
 
-const taskIncomplete=function(){
+const taskIncomplete = function () {
     console.log("Incomplete Task...");
-//Mark task as incomplete.
+    //Mark task as incomplete.
     //When the checkbox is unchecked
     //Append the task list item to the #main__tasks_todo-list.
-    const listItem=this.parentNode;
+    const listItem = this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }
@@ -155,13 +154,13 @@ const bindTaskEvents = function(taskListItem, checkBoxEventHandler){
 //for each list item
 for (let i = 0; i < incompleteTaskHolder.children.length; i++){
     //bind events to list items chldren(tasksCompleted)
-    bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
+    bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
 }
 
 //cycle over completedTasksHolder ul list items
 for (let i = 0; i < completedTasksHolder.children.length; i++){
     //bind events to list items chldren(tasksIncompleted)
-    bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
+    bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
 
 // Issues with usability don't get seen until they are in front of a human tester.
