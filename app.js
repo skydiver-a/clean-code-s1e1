@@ -75,7 +75,7 @@ const editTask = function () {
     const editInput = listItem.querySelector('.main-box__input-text');
     const label = listItem.querySelector(".main-box__label-task");
     const editBtn = listItem.querySelector(".main-box__btn-edit");
-    const containsClass = listItem.classList.contains(".main-box__edit-mode");
+    const containsClass = listItem.classList.contains("main-box__edit-mode");
 
     //If class of the parent is .edit-mode
     if(containsClass){
